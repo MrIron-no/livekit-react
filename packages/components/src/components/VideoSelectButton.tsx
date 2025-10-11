@@ -41,7 +41,7 @@ export const VideoSelectButton = ({
         return { label: item.label };
       }),
     );
-  }, []);
+  }, [requestPermissions]);
 
   useEffect(() => {
     listVideoDevices();

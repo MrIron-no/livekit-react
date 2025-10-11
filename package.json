@@ -2,6 +2,7 @@
   "name": "root",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "yarn@4.1.0",
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.6",
     "@changesets/cli": "^2.24.4",

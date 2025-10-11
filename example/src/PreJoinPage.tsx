@@ -9,11 +9,10 @@ import { useNavigate } from 'react-router-dom';
 export const PreJoinPage = () => {
   // initial state from query parameters
   const searchParams = new URLSearchParams(window.location.search);
-  const storedUrl = searchParams.get('url') ?? 'ws://localhost:7880';
+  const url = process.env.REACT_APP_LIVEKIT_URL ?? 'ws://localhost:7880';
   const storedToken = searchParams.get('token') ?? '';
 
   // state to pass onto room
-  const [url, setUrl] = useState(storedUrl);
   const [token, setToken] = useState<string>(storedToken);
   const [simulcast, setSimulcast] = useState(true);
   const [dynacast, setDynacast] = useState(true);
@@ -132,12 +131,6 @@ export const PreJoinPage = () => {
         <h2>LiveKit Video</h2>
         <hr />
         <div className="entrySection">
-          <div>
-            <div className="label">LiveKit URL</div>
-            <div>
-              <input type="text" name="url" value={url} onChange={(e) => setUrl(e.target.value)} />
-            </div>
-          </div>
           <div>
             <div className="label">Token</div>
             <div>

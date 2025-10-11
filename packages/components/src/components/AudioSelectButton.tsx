@@ -41,7 +41,7 @@ export const AudioSelectButton = ({
         return { label: item.label };
       }),
     );
-  }, []);
+  }, [requestPermissions]);
 
   useEffect(() => {
     listAudioDevices();

@@ -57,7 +57,7 @@ a:hover {
 
 .entrySection {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   margin-top: 40px;
   gap: 0.8rem;
 }
