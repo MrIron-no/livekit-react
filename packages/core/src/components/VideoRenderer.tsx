@@ -70,7 +70,7 @@ export const VideoRenderer = ({
   }
 
   if (objectFit) {
-    style.objectFit = objectFit;
+    style.objectFit = objectFit as CSSProperties['objectFit'];
   }
 
   return <video ref={ref} className={className} style={style} />;
